@@ -68,6 +68,7 @@ func main() {
 	params["value"] = ipaddr.Address
 	if ipaddr.Proto == "ipv6" {
 		fmt.Println("本地有ipv6地址,开始设置")
+		params["record_type"] = "AAAA"
 	} else {
 		fmt.Println("本地没有ipv6地址,准备开始设置ipv4解析")
 		params["record_type"] = "A"
